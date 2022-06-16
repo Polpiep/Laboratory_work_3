@@ -40,6 +40,8 @@ namespace Laboratory_work_3.Forms
             App.myHome = dgListHomeLand.SelectedItem as Model.HomeLand;
             App.myWork = dgListWork.SelectedItem as Model.Work;
 
+            App.myGamer.GamerId = App.myHome.HomeId;
+            App.myWork.WorkId = App.myHome.HomeId;
             if (App.myGamer.GamerId == App.myHome.HomeId)
             {
                 if (App.myGamer.GamerId == App.myWork.WorkId)
@@ -57,7 +59,6 @@ namespace Laboratory_work_3.Forms
             {
                 MessageBox.Show("Выберете поля с одинаковым id");
             }
-
         }
 
         private void btBack_Click(object sender, RoutedEventArgs e)

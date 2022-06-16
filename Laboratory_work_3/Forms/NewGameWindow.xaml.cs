@@ -25,7 +25,7 @@ namespace Laboratory_work_3.Forms
             }
             else
             {
-                if (Convert.ToInt32(tbAge.Text) >= 33 && Convert.ToInt32(tbAge.Text) <= 130)
+                if (Convert.ToInt32(tbAge.Text) >= 10 && Convert.ToInt32(tbAge.Text) <= 130)
                 {
 
                     Model.Gamer gamer = new Model.Gamer();

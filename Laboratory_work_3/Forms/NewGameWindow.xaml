@@ -16,7 +16,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <Label  Margin="5">Укажите возраст</Label>
+                <Label  Margin="5">Укажите возраст от 10  до 130</Label>
                 <TextBox Name="tbAge" Width="150" Margin="5"></TextBox>
             </StackPanel>
 
