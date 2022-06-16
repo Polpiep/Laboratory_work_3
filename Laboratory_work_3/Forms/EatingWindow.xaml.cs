@@ -3,11 +3,11 @@
 namespace Laboratory_work_3.Forms
 {
     /// <summary>
-    /// Логика взаимодействия для CafeWindow.xaml
+    /// Логика взаимодействия для EatingWindow.xaml
     /// </summary>
-    public partial class CafeWindow : Window
+    public partial class EatingWindow : Window
     {
-        public CafeWindow()
+        public EatingWindow()
         {
             InitializeComponent();
         }

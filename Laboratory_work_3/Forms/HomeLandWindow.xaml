@@ -5,8 +5,132 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laboratory_work_3.Forms"
         mc:Ignorable="d"
-        Title="HomeLandWindow" Height="450" Width="800">
+        Title="Ферма" Style="{StaticResource st_Win}">
+
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0">
+            <StackPanel >
+                <Button x:Name="btExit" Click="btExit_Click" >Выйти</Button>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="gridComputerInfo" Grid.Column="0" Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Grid.Row="1">
+                <StackPanel Style="{StaticResource st_SP}" Margin="20">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Дом:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding Home}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Фермеры:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding Farmers}"></TextBlock>
+                        <TextBlock Text="человек" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Инструменты:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding Tools}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Территория для пашни:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding ArayleLand}"></TextBlock>
+                        <TextBlock Text="соток" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Поголовье скота:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding Livestock}"></TextBlock>
+                        <TextBlock Text="голов" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Еда для скота:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding LivestockFeed}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Пастухи:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding LivestockMan}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="удобрение:" Margin="5"></TextBlock>
+                        <TextBlock Margin="5" Text="{Binding Drug}"></TextBlock>
+                        <TextBlock Text="lvl" Margin="5"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+
+            <Grid Grid.Column="1" Grid.Row="1">
+
+                <StackPanel Style="{StaticResource st_SP}" Margin="16">
+                    <Button x:Name="btUpgrade1" Click="btUpgrade1_Click">Улучшить дом</Button>
+                    <Button x:Name="btUpgrade2" Click="btUpgrade2_Click">Улучшить Ферму</Button>
+                    <Button x:Name="btUpgrade3" Click="btUpgrade3_Click">купить более хорошие инструменты</Button>
+                    <Button x:Name="btUpgrade4" Click="btUpgrade4_Click">Купить территорию для пашни</Button>
+                    <Button x:Name="btUpgrade5" Click="btUpgrade5_Click">Купить овцу</Button>
+                    <Button x:Name="btUpgrade6" Click="btUpgrade6_Click">Купить более хороший корм</Button>
+                    <Button x:Name="btUpgrade7" Click="btUpgrade7_Click">Нанять пастухов</Button>
+                    <Button x:Name="btUpgrade8" Click="btUpgrade8_Click">Купить более хорошие удобрения</Button>
+
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="5"  Text="Усталость: "></TextBlock>
+                            <TextBlock Name="tbInfoFat" Margin="5"  Text="{Binding Fatigue}"></TextBlock>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="5"  Text="Опыт: "></TextBlock>
+                            <TextBlock Name="tbInfoExp" Margin="5"  Text="{Binding Experience}"></TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <StackPanel Style="{StaticResource st_SP}" Grid.Row="0" VerticalAlignment="Center">
+                <TextBlock Margin="5" HorizontalAlignment="Center">Рассказывать истории в трактире</TextBlock>
+                <TextBlock  Margin="5" HorizontalAlignment="Center">(усталость +25, опыт +10)</TextBlock>
+                <Button x:Name="btTellStories" Click="btTellStories_Click">Рассказывать</Button>
+            </StackPanel>
+            <StackPanel Style="{StaticResource st_SP}" Grid.Row="1" VerticalAlignment="Center">
+                <TextBlock  Margin="5" HorizontalAlignment="Center">Писать романы</TextBlock>
+                <TextBlock  Margin="5" HorizontalAlignment="Center">(усталость +50, опыт +25)</TextBlock>
+                <Button x:Name="btWriteStories" Click="btWriteStories_Click">Писать</Button>
+            </StackPanel>
+            <StackPanel Style="{StaticResource st_SP}" Grid.Row="2" VerticalAlignment="Center">
+                <TextBlock  Margin="5" HorizontalAlignment="Center"> Искать клады</TextBlock>
+                <TextBlock  Margin="5" HorizontalAlignment="Center">(усталость +75, опыт +50)</TextBlock>
+                <Button x:Name="btDoStories" Click="btDOStories_Click">Искать</Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

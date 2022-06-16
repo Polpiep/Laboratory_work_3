@@ -1,7 +1,10 @@
-﻿namespace Laboratory_work_3.Model
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Laboratory_work_3.Model
 {
     public class HomeLand
     {
+        [Key]
         public int HomeId { get; set; }
         public int Farmers { get; set; }
         public int Tools { get; set; }

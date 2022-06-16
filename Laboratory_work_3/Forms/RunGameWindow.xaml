@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Загрузить игру" Style="{StaticResource st_Win}">
     <Grid>
-        <ScrollViewer>
+        <ScrollViewer Margin="30"> 
             <StackPanel Margin="16">
                 <DataGrid MinHeight="100" Name="dgListGame">
                     <DataGrid.Columns>
@@ -22,17 +22,17 @@
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <DataGrid  MinHeight="100" Name="dgListComputer">
+                <DataGrid  MinHeight="100" Name="dgListHomeLand">
                     <DataGrid.Columns>
-                        <DataGridTextColumn x:Name="dgtcComputerId" Header="id" Binding="{Binding ComputerId}" />
-                        <DataGridTextColumn x:Name="dgtcComputerProcessor" Header="Процессор" Binding="{Binding Processor}" />
-                        <DataGridTextColumn x:Name="dgtcComputerVideoCard" Header="Видеокарта" Binding="{Binding VideoCard}" />
-                        <DataGridTextColumn x:Name="dgtcComputerRamMemory" Header="Оперативка" Binding="{Binding RamMemory}" />
-                        <DataGridTextColumn x:Name="dgtcComputerSSD" Header="ССД" Binding="{Binding SSD}" />
-                        <DataGridTextColumn x:Name="dgtcComputerCooling" Header="Охлаждение" Binding="{Binding Cooling}" />
-                        <DataGridTextColumn x:Name="dgtcComputerMotherboard" Header="Материнская плата" Binding="{Binding Motherboard}" />
-                        <DataGridTextColumn x:Name="dgtcComputerPowerSupply" Header="Блок питания" Binding="{Binding PowerSupply}" />
-                        <DataGridTextColumn x:Name="dgtcComputerBody" Header="Корпус" Binding="{Binding Body}" />
+                        <DataGridTextColumn x:Name="dgtcHomeId" Header="id" Binding="{Binding HomeId}" />
+                        <DataGridTextColumn x:Name="dgtcFarmers" Header="Фермеры" Binding="{Binding Farmers}" />
+                        <DataGridTextColumn x:Name="dgtcTools" Header="инструменты" Binding="{Binding Tools}" />
+                        <DataGridTextColumn x:Name="dgtcLivestock" Header="поголовье скота" Binding="{Binding Livestock}" />
+                        <DataGridTextColumn x:Name="dgtcLivestockFeed" Header="Корма для скота" Binding="{Binding LivestockFeed}" />
+                        <DataGridTextColumn x:Name="dgtcLivestockMan" Header="Пастухи" Binding="{Binding LivestockMan}" />
+                        <DataGridTextColumn x:Name="dgtcArayleLand" Header="соток земли" Binding="{Binding ArayleLand}" />
+                        <DataGridTextColumn x:Name="dgtcHome" Header="Уровень дома" Binding="{Binding Home}" />
+                        <DataGridTextColumn x:Name="dgtcDrug" Header="уровень удобрений" Binding="{Binding Drug}" />
                     </DataGrid.Columns>
                 </DataGrid>
 
@@ -49,5 +49,8 @@
                 <Button x:Name="btRunGame" Click="btRunGame_Click" >Загрузить игру</Button>
             </StackPanel>
         </ScrollViewer>
-    </Grid>
+        <StackPanel>
+            <Button x:Name="btBack" Click="btBack_Click" >Вернуться в главное меню</Button>
+        </StackPanel>   
+        </Grid>
 </Window>

@@ -35,7 +35,7 @@ namespace Laboratory_work_3.Forms
 
                     gamer.Satiety = 100;
                     gamer.Fatigue = 0;
-                    gamer.Money = 100;
+                    gamer.Money = 100000;
                     gamer.Day = 0;
                     App.myGamer = gamer;
 

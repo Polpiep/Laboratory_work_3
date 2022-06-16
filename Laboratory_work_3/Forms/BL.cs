@@ -36,5 +36,30 @@ namespace Laboratory_work_3.Forms
                 return ("У вас не хватает денег");
             }
         }
+
+        public static string Corning(double m)
+        {
+            int needs = Convert.ToInt32(50 * m);
+            int uping = Convert.ToInt32(10 * m);
+            if (App.myWork.Experience > needs)
+            {
+                if (App.myGamer.Money >= needs)
+                {
+                    App.myGamer.Fatigue += uping;
+                    App.myWork.Experience += uping;
+                    App.myGamer.Money -= needs;
+                    return ("Вы успешно выполнили то, что планировали");
+                    
+                }
+                else
+                {
+                    return("Недостаточно денег");
+                }
+            }
+            else
+            {
+                return("Недостаточно опыта");
+            }
+        }
     }
 }

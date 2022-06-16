@@ -22,10 +22,10 @@ namespace Laboratory_work_3.Forms
             {
                 DB.MySqlLiteContext mySqlLiteContext = new DB.MySqlLiteContext();
                 var gamer = mySqlLiteContext.Gamers.ToList();
-                var computer = mySqlLiteContext.Farms.ToList();
+                var farms = mySqlLiteContext.Farms.ToList();
                 var work = mySqlLiteContext.Works.ToList();
                 dgListGame.ItemsSource = gamer;
-                dgListComputer.ItemsSource = computer;
+                dgListHomeLand.ItemsSource = farms;
                 dgListWork.ItemsSource = work;
             }
             catch (Exception ex)
@@ -37,7 +37,7 @@ namespace Laboratory_work_3.Forms
         private void btRunGame_Click(object sender, RoutedEventArgs e)
         {
             App.myGamer = dgListGame.SelectedItem as Model.Gamer;
-            App.myHome = dgListComputer.SelectedItem as Model.HomeLand;
+            App.myHome = dgListHomeLand.SelectedItem as Model.HomeLand;
             App.myWork = dgListWork.SelectedItem as Model.Work;
 
             if (App.myGamer.GamerId == App.myHome.HomeId)
@@ -58,6 +58,13 @@ namespace Laboratory_work_3.Forms
                 MessageBox.Show("Выберете поля с одинаковым id");
             }
 
+        }
+
+        private void btBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            Close();
         }
     }
 }

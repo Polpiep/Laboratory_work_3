@@ -25,28 +25,28 @@
 
         <Grid Grid.Column="0" Grid.Row="1">
             <StackPanel VerticalAlignment="Center">
-                <TextBlock HorizontalAlignment="Center">Статьи на метаните</TextBlock>
-                <TextBlock Margin="5"  HorizontalAlignment="Center">(опыт +10, усталость +10, цена: бесплатно)</TextBlock>
-                <Image Height="200" Width="150" Source="pack://application:,,,/images/metanit.png"/>
-                <Button x:Name="btReadArticles" Click="btReadArticles_Click">Читать</Button>
+                <TextBlock HorizontalAlignment="Center">Слушать рассказы деда</TextBlock>
+                <TextBlock Margin="5"  HorizontalAlignment="Center">(нужно опыта 25, опыт +5, усталость +5, цена: 25$)</TextBlock>
+                <Image Height="200" Width="255" Source="pack://application:,,,/images/ListenToGrand.jpg"/>
+                <Button x:Name="btListenToGrand" Click="btListenToGrand_Click">слушать</Button>
             </StackPanel>
         </Grid>
 
         <Grid Grid.Column="1" Grid.Row="1">
             <StackPanel VerticalAlignment="Center">
-                <TextBlock HorizontalAlignment="Center">Книги по программированию</TextBlock>
-                <TextBlock HorizontalAlignment="Center">(опыт +20, усталость +20, цена: 200 $)</TextBlock>
-                <Image Height="200" Width="150" Source="pack://application:,,,/images/books.jpg"/>
+                <TextBlock HorizontalAlignment="Center">Книги</TextBlock>
+                <TextBlock HorizontalAlignment="Center">(нужно опыта 150, опыт +30, усталость +30, цена: 150$)</TextBlock>
+                <Image Height="200" Width="250" Source="pack://application:,,,/images/ReadBook.jpg"/>
                 <Button x:Name="btReadBooks" Click="btReadBooks_Click">Читать</Button>
             </StackPanel>
         </Grid>
 
         <Grid Grid.Column="2" Grid.Row="1">
             <StackPanel VerticalAlignment="Center">
-                <TextBlock HorizontalAlignment="Center">Курсы по программированию</TextBlock>
-                <TextBlock HorizontalAlignment="Center">(опыт +30, усталость +30, цена: 500 $)</TextBlock>
-                <Image Height="200" Width="150" Source="pack://application:,,,/images/course.jpg"/>
-                <Button x:Name="btTakeCourses" Click="btTakeCourses_Click">Пройти</Button>
+                <TextBlock HorizontalAlignment="Center">Угостить всех в трактире</TextBlock>
+                <TextBlock HorizontalAlignment="Center">(нужно опыта 250, опыт +50, усталость +50, цена: 250$)</TextBlock>
+                <Image Height="200" Width="247" Source="pack://application:,,,/images/Tractir.jpg"/>
+                <Button x:Name="btTreatEveryone" Click="btTreatEveryone_Click">Пройти</Button>
             </StackPanel>
         </Grid>
     </Grid>

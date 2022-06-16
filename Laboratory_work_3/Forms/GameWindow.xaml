@@ -163,9 +163,10 @@
                 <Button x:Name="btCafe" Click="btEating_Click">Кушанье</Button>
                 <Button x:Name="btWork" Click="btWork_Click">Работа</Button>
                 <Button x:Name="btLearning" Click="btLearning_Click">Обучение</Button>
-                <Button x:Name="btComputer" Click="btFarm_Click">Ферма</Button>
+                <Button x:Name="btComputer" Click="btFarm_Click">Ферма и дела</Button>
                 <Button x:Name="btNextDay" Click="btNextDay_Click">Следующий день</Button>
                 <Button x:Name="btSaveGame" Click="btSaveGame_Click">Сохранить игру</Button>
+                <Button x:Name="btLoadGame" Click="btLoadGame_Click">Загрузить игру</Button>
                 <Button x:Name="btexit" Click="btexit_Click">Выйти в главное меню</Button>
             </StackPanel>
         </Grid>

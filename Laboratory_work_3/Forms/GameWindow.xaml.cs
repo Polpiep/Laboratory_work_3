@@ -45,7 +45,7 @@ namespace Laboratory_work_3.Forms
                 mainWindow.Show();
                 Close();
             }
-            if (Work.Experience >= 15000 && Work.Name == "Своя IT-компания" && Home.Farmers == 5 && Home.Tools == 5 &&
+            if (Work.Experience >= 15000 && Work.Name == "Глава торговой гильдия" && Home.Farmers == 5 && Home.Tools == 5 &&
                 Home.Livestock == 5 && Home.LivestockFeed == 5 && Home.LivestockMan == 5 && Home.ArayleLand == 5 && Home.Home == 5 && Home.Drug == 5)
             {
                 MessageBox.Show("Поздравляем, вы прошли игру! Вам понадобилось на это " + Gamer.Day + " дней");
@@ -136,8 +136,8 @@ namespace Laboratory_work_3.Forms
 
         private void btEating_Click(object sender, RoutedEventArgs e)
         {
-            CafeWindow cafeWindow = new CafeWindow();
-            cafeWindow.ShowDialog();
+            EatingWindow eatingWindow = new EatingWindow();
+            eatingWindow.ShowDialog();
             Close();
             gridInfoGamer.DataContext = null;
             gridInfoGamer.DataContext = Gamer;
@@ -145,8 +145,8 @@ namespace Laboratory_work_3.Forms
 
         private void btFarm_Click(object sender, RoutedEventArgs e)
         {
-            ComputerWindow computerWindow = new ComputerWindow();
-            computerWindow.ShowDialog();
+            HomeLandWindow homeLandWindow = new HomeLandWindow();
+            homeLandWindow.ShowDialog();
             Close();
             gridComputerInfo.DataContext = null;
             gridComputerInfo.DataContext = Home;
@@ -154,6 +154,13 @@ namespace Laboratory_work_3.Forms
             gridInfoGamer.DataContext = Gamer;
             gridInfoWork.DataContext = null;
             gridInfoWork.DataContext = Work;
+        }
+
+        private void btLoadGame_Click(object sender, RoutedEventArgs e)
+        {
+            Forms.RunGameWindow RunGame = new Forms.RunGameWindow();
+            RunGame.Show();
+            Close();
         }
     }
 }

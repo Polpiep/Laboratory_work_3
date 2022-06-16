@@ -1,4 +1,4 @@
-﻿<Window x:Class="Laboratory_work_3.Forms.CafeWindow"
+﻿<Window x:Class="Laboratory_work_3.Forms.EatingWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -50,7 +50,7 @@
             <StackPanel Margin="16" VerticalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center">Бранч</TextBlock>
                 <TextBlock HorizontalAlignment="Center">Цена: 5$ (сытость +5)</TextBlock>
-                <Image Height="150" Width="210" Source="pack://application:,,,/images/afterDinnerTea.jpg" />
+                <Image Height="150" Width="210" Source="pack://application:,,,/images/Branch.jpg" />
                 <Button x:Name="btaBranch" Click="btaBranch_Click">Купить</Button>
             </StackPanel>
         </Grid>
@@ -58,7 +58,7 @@
             <StackPanel Margin="16" VerticalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center">Обед</TextBlock>
                 <TextBlock HorizontalAlignment="Center">Цена: 25$ (сытость +25)</TextBlock>
-                <Image Height="150" Width="210" Source="pack://application:,,,/images/afterDinnerTea.jpg" />
+                <Image Height="150" Width="210" Source="pack://application:,,,/images/Dinner.jpg" />
                 <Button x:Name="btaDinner" Click="btaDinner_Click">Купить</Button>
             </StackPanel>
         </Grid>
@@ -74,7 +74,7 @@
             <StackPanel Margin="16" VerticalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center">Ужин</TextBlock>
                 <TextBlock HorizontalAlignment="Center">Цена: 20$ (сытость +20)</TextBlock>
-                <Image Height="150" Width="210" Source="pack://application:,,,/images/afterDinnerTea.jpg" />
+                <Image Height="150" Width="210" Source="pack://application:,,,/images/EveningMeal1.jpg" />
                 <Button x:Name="btaEveningMeal" Click="btaEveningMeal_Click">Купить</Button>
             </StackPanel>
         </Grid>
@@ -82,7 +82,7 @@
             <StackPanel Margin="16" VerticalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center">Второй ужин</TextBlock>
                 <TextBlock HorizontalAlignment="Center">Цена: 3$ (сытость +3)</TextBlock>
-                <Image Height="150" Width="210" Source="pack://application:,,,/images/afterDinnerTea.jpg" />
+                <Image Height="150" Width="210" Source="pack://application:,,,/images/EveningMeal2.jpg" />
                 <Button x:Name="btaSecondEveningMeal" Click="btaSecondEveningMeal_Click">Купить</Button>
             </StackPanel>
         </Grid>

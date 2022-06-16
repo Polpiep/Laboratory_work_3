@@ -8,11 +8,18 @@
 
   <ItemGroup>
     <None Remove="images\afterDinnerTea.jpg" />
+    <None Remove="images\Branch.jpg" />
+    <None Remove="images\Dinner.jpg" />
+    <None Remove="images\EveningMeal1.jpg" />
+    <None Remove="images\EveningMeal2.jpg" />
     <None Remove="images\FirstBreackfast.jpg" />
     <None Remove="images\Hobbit.jpg" />
     <None Remove="images\HobbitGameWindow.jpg" />
     <None Remove="images\HobbitGameWindow2.jpg" />
+    <None Remove="images\ListenToGrand.jpg" />
+    <None Remove="images\ReadBook.jpg" />
     <None Remove="images\SecondBreakfast.jpg" />
+    <None Remove="images\Tractir.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +37,10 @@
 
   <ItemGroup>
     <Resource Include="images\afterDinnerTea.jpg" />
+    <Resource Include="images\Branch.jpg" />
+    <Resource Include="images\Dinner.jpg" />
+    <Resource Include="images\EveningMeal1.jpg" />
+    <Resource Include="images\EveningMeal2.jpg" />
     <Resource Include="images\FirstBreackfast.jpg" />
     <Resource Include="images\Hobbit.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -38,7 +49,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="images\HobbitGameWindow2.jpg" />
+    <Resource Include="images\ListenToGrand.jpg" />
+    <Resource Include="images\ReadBook.jpg" />
     <Resource Include="images\SecondBreakfast.jpg" />
+    <Resource Include="images\Tractir.jpg" />
   </ItemGroup>
 
   <ItemGroup>
