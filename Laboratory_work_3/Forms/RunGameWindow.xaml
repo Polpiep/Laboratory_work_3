@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laboratory_work_3.Forms"
         mc:Ignorable="d"
-        Title="Загрузить игру" Style="{StaticResource st_Win}">
+        Title="Загрузить игру" Style="{StaticResource st_Win}"
+        Icon="pack://application:,,,/images/icon.jpg">
     <Grid>
         <ScrollViewer Margin="30"> 
             <StackPanel Margin="16">

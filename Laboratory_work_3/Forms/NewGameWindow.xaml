@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laboratory_work_3.Forms"
         mc:Ignorable="d"
-        Title="Новая игра" Style="{StaticResource st_Win}">
+        Title="Новая игра" Style="{StaticResource st_Win}"
+        Icon="pack://application:,,,/images/icon.jpg">
     <Grid>
         <StackPanel>
             

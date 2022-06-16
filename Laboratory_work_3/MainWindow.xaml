@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laboratory_work_3"
         mc:Ignorable="d"
-        Title="Симулятор хоббита" Style="{StaticResource st_Win}">
+        Title="Симулятор хоббита" Style="{StaticResource st_Win}"
+        Icon="pack://application:,,,/images/icon.jpg">
     <Grid>
         <StackPanel VerticalAlignment="Center">
             <Button  Height="50"  Margin="20" x:Name="btNewGame" Click="btNewGame_Click">Новая игра</Button>

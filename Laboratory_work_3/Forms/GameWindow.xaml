@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laboratory_work_3.Forms"
+        Icon="pack://application:,,,/images/icon.jpg"
         mc:Ignorable="d" Style="{StaticResource st_Win}">
 
     <Grid>

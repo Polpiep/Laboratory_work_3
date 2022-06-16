@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laboratory_work_3.Forms"
         mc:Ignorable="d"
-        Title="Ферма" Style="{StaticResource st_Win}">
+        Title="Ферма" Style="{StaticResource st_Win}"
+        Icon="pack://application:,,,/images/icon.jpg">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -87,7 +88,7 @@
 
                 <StackPanel Style="{StaticResource st_SP}" Margin="16">
                     <Button x:Name="btUpgrade1" Click="btUpgrade1_Click">Улучшить дом</Button>
-                    <Button x:Name="btUpgrade2" Click="btUpgrade2_Click">Улучшить Ферму</Button>
+                    <Button x:Name="btUpgrade2" Click="btUpgrade2_Click">Нанять фермеров</Button>
                     <Button x:Name="btUpgrade3" Click="btUpgrade3_Click">купить более хорошие инструменты</Button>
                     <Button x:Name="btUpgrade4" Click="btUpgrade4_Click">Купить территорию для пашни</Button>
                     <Button x:Name="btUpgrade5" Click="btUpgrade5_Click">Купить овцу</Button>

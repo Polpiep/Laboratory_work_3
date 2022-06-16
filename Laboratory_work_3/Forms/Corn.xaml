@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laboratory_work_3.Forms"
         mc:Ignorable="d"
-        Title="Corn" Height="450" Width="800">
+        Title="Corn" Height="450" Width="800"
+        Icon="pack://application:,,,/images/icon.jpg">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition  />

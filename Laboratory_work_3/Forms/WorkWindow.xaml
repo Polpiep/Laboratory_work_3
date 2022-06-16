@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laboratory_work_3.Forms"
         mc:Ignorable="d"
-        Title="Работа" Style="{StaticResource st_Win}">
+        Title="Работа" Style="{StaticResource st_Win}"
+        Icon="pack://application:,,,/images/icon.jpg">
     <Grid>
         <StackPanel Margin="20">
             <ListBox x:Name="listWork" MinHeight="150" Margin="5"></ListBox>

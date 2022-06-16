@@ -115,6 +115,29 @@ namespace Laboratory_work_3.Forms
 
         private void btUpgrade4_Click(object sender, RoutedEventArgs e)
         {
+            if (homeLand.ArayleLand == 5)
+            {
+                MessageBox.Show("Невозможно улучшить! Достигнут максимальный уровень");
+            }
+            else
+            {
+                if (App.myGamer.Money >= 1000)
+                {
+                    homeLand.ArayleLand += 1;
+                    gridComputerInfo.DataContext = null;
+                    gridComputerInfo.DataContext = homeLand;
+                    App.myGamer.Money -= 1000;
+                }
+
+                else
+                {
+                    MessageBox.Show("Недостаточно денег");
+                }
+            }
+        }
+
+        private void btUpgrade5_Click(object sender, RoutedEventArgs e)
+        {
             if (homeLand.Livestock == 5)
             {
                 MessageBox.Show("Невозможно улучшить! Достигнут максимальный уровень");
@@ -136,7 +159,7 @@ namespace Laboratory_work_3.Forms
             }
         }
 
-        private void btUpgrade5_Click(object sender, RoutedEventArgs e)
+        private void btUpgrade6_Click(object sender, RoutedEventArgs e)
         {
             if (homeLand.LivestockFeed == 5)
             {
@@ -159,7 +182,7 @@ namespace Laboratory_work_3.Forms
             }
         }
 
-        private void btUpgrade6_Click(object sender, RoutedEventArgs e)
+        private void btUpgrade7_Click(object sender, RoutedEventArgs e)
         {
             if (homeLand.LivestockMan == 5)
             {
@@ -170,29 +193,6 @@ namespace Laboratory_work_3.Forms
                 if (App.myGamer.Money >= 1000)
                 {
                     homeLand.LivestockMan += 1;
-                    gridComputerInfo.DataContext = null;
-                    gridComputerInfo.DataContext = homeLand;
-                    App.myGamer.Money -= 1000;
-                }
-
-                else
-                {
-                    MessageBox.Show("Недостаточно денег");
-                }
-            }
-        }
-
-        private void btUpgrade7_Click(object sender, RoutedEventArgs e)
-        {
-            if (homeLand.Drug == 5)
-            {
-                MessageBox.Show("Невозможно улучшить! Достигнут максимальный уровень");
-            }
-            else
-            {
-                if (App.myGamer.Money >= 1000)
-                {
-                    homeLand.Drug += 1;
                     gridComputerInfo.DataContext = null;
                     gridComputerInfo.DataContext = homeLand;
                     App.myGamer.Money -= 1000;
@@ -235,7 +235,7 @@ namespace Laboratory_work_3.Forms
             tbInfoFat.DataContext = Gamer;
             tbInfoExp.DataContext = null;
             tbInfoExp.DataContext = Work;
-            MessageBox.Show("Вы выполнили разработку");
+            MessageBox.Show("Вы Рассказали историю");
             if (App.myHome.Farmers == 2 && App.myHome.Tools == 2 && App.myHome.Livestock == 2 && App.myHome.LivestockFeed == 2 &&
                 App.myHome.LivestockMan == 2 && App.myHome.ArayleLand == 2 && App.myHome.Home == 2 && App.myHome.Drug == 2)
             {
