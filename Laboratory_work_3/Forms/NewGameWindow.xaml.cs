@@ -25,45 +25,52 @@ namespace Laboratory_work_3.Forms
             }
             else
             {
-                if (Convert.ToInt32(tbAge.Text) >= 10 && Convert.ToInt32(tbAge.Text) <= 130)
+                try
                 {
+                    if (Convert.ToInt32(tbAge.Text) >= 10 && Convert.ToInt32(tbAge.Text) <= 130)
+                    {
 
-                    Model.Gamer gamer = new Model.Gamer();
-                    gamer.Name = tbName.Text;
-                    gamer.Age = Convert.ToInt32(tbAge.Text);
-                    gamer.Gender = cbGender.SelectedValue.ToString();
+                        Model.Gamer gamer = new Model.Gamer();
+                        gamer.Name = tbName.Text;
+                        gamer.Age = Convert.ToInt32(tbAge.Text);
+                        gamer.Gender = cbGender.SelectedValue.ToString();
 
-                    gamer.Satiety = 100;
-                    gamer.Fatigue = 0;
-                    gamer.Money = 100000;
-                    gamer.Day = 0;
-                    App.myGamer = gamer;
+                        gamer.Satiety = 100;
+                        gamer.Fatigue = 0;
+                        gamer.Money = 100000;
+                        gamer.Day = 0;
+                        App.myGamer = gamer;
 
-                    Model.HomeLand homeLand = new Model.HomeLand();
-                    homeLand.Farmers = 0;
-                    homeLand.Tools = 0;
-                    homeLand.Livestock = 0;
-                    homeLand.LivestockFeed = 0;
-                    homeLand.LivestockMan = 0;
-                    homeLand.ArayleLand = 0;
-                    homeLand.Home = 0;
-                    homeLand.Drug = 0;
-                    App.myHome = homeLand;
+                        Model.HomeLand homeLand = new Model.HomeLand();
+                        homeLand.Farmers = 0;
+                        homeLand.Tools = 0;
+                        homeLand.Livestock = 0;
+                        homeLand.LivestockFeed = 0;
+                        homeLand.LivestockMan = 0;
+                        homeLand.ArayleLand = 0;
+                        homeLand.Home = 0;
+                        homeLand.Drug = 0;
+                        App.myHome = homeLand;
 
-                    Model.Work work = new Model.Work();
-                    work.Name = "Безработный";
-                    work.Experience = 0;
-                    work.Wages = 0;
-                    work.UpExperience = 0;
-                    App.myWork = work;
+                        Model.Work work = new Model.Work();
+                        work.Name = "Безработный";
+                        work.Experience = 0;
+                        work.Wages = 0;
+                        work.UpExperience = 0;
+                        App.myWork = work;
 
-                    Forms.GameWindow gameWindow = new GameWindow();
-                    gameWindow.Show();
-                    Close();
+                        Forms.GameWindow gameWindow = new GameWindow();
+                        gameWindow.Show();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Введите корректный возраст!");
+                    }
                 }
-                else
+                catch
                 {
-                    MessageBox.Show("Введите корректный возраст!");
+                        MessageBox.Show("Введите корректный возраст!");
                 }
                 
             }

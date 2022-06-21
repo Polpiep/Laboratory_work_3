@@ -42,7 +42,7 @@ namespace Laboratory_work_3.Forms
         public static string Corning(double m)
         {
             int needs = Convert.ToInt32(50 * m);
-            int uping = Convert.ToInt32(10 * m);
+            int uping = Convert.ToInt32(5 * m);
             if (App.myWork.Experience > needs)
             {
                 if (App.myGamer.Money >= needs)
@@ -100,8 +100,7 @@ namespace Laboratory_work_3.Forms
                 App.myHome.LivestockMan += 1;
             }else if (NumUpdate == 8)
             {
-                App.myHome.Drug += 1; 
-              
+                App.myHome.Drug += 1;
             }
             App.myGamer.Money -= 1000;
         }

@@ -205,7 +205,7 @@ namespace Laboratory_work_3.Forms
             {
                 if (App.myGamer.Money >= 1000)
                 {
-                    BL.Corning(8);
+                    BL.Upgraiding(8);
                     gridComputerInfo.DataContext = null;
                     gridComputerInfo.DataContext = homeLand;
                 }
@@ -276,6 +276,7 @@ namespace Laboratory_work_3.Forms
                 }
                 else
                 {
+                    App.myGamer.Fatigue += 50;
                     MessageBox.Show("Вы так ничего и не нашли(");
                 }
             }
