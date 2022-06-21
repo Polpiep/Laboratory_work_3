@@ -48,6 +48,7 @@
                     </DataGrid.Columns>
                 </DataGrid>
                 <Button x:Name="btRunGame" Click="btRunGame_Click" >Загрузить игру</Button>
+                <TextBlock>Нажмите поля с одинаковыми id на всех таблицах</TextBlock>
             </StackPanel>
         </ScrollViewer>
         <StackPanel>

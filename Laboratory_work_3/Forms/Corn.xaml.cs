@@ -21,26 +21,26 @@ namespace Laboratory_work_3.Forms
 
         private void btReadBooks_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(BL.Corning(3));
-            GameWindow gameWindow = new GameWindow();
-            gameWindow.Show();
-            Close();
+                BL.Corning(3);
+                GameWindow gameWindow = new GameWindow();
+                gameWindow.Show();
+                Close();
         }
 
         private void btListenToGrand_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(BL.Corning(0.5));
-            GameWindow gameWindow = new GameWindow();
-            gameWindow.Show();
-            Close();
+                BL.Corning(0.5);
+                GameWindow gameWindow = new GameWindow();
+                gameWindow.Show();
+                Close();
         }
 
         private void btTreatEveryone_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(BL.Corning(5));
-            GameWindow gameWindow = new GameWindow();
-            gameWindow.Show();
-            Close();
+                BL.Corning(5);
+                GameWindow gameWindow = new GameWindow();
+                gameWindow.Show();
+                Close();
         }
     }
 }

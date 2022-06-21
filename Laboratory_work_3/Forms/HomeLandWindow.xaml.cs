@@ -53,12 +53,10 @@ namespace Laboratory_work_3.Forms
             {
                 if (App.myGamer.Money >= 1000)
                 {
-                    homeLand.Home += 1;
+                    BL.Upgraiding(1);
                     gridComputerInfo.DataContext = null;
                     gridComputerInfo.DataContext = homeLand;
-                    App.myGamer.Money -= 1000;
                 }
-
                 else
                 {
                     MessageBox.Show("Недостаточно денег");
@@ -76,10 +74,9 @@ namespace Laboratory_work_3.Forms
             {
                 if (App.myGamer.Money >= 1000)
                 {
-                    homeLand.Farmers += 1;
+                    BL.Upgraiding(2);
                     gridComputerInfo.DataContext = null;
                     gridComputerInfo.DataContext = homeLand;
-                    App.myGamer.Money -= 1000;
                 }
 
                 else
@@ -100,10 +97,9 @@ namespace Laboratory_work_3.Forms
             {
                 if (App.myGamer.Money >= 1000)
                 {
-                    homeLand.Tools += 1;
+                    BL.Upgraiding(3);
                     gridComputerInfo.DataContext = null;
                     gridComputerInfo.DataContext = homeLand;
-                    App.myGamer.Money -= 1000;
                 }
 
                 else
@@ -123,10 +119,9 @@ namespace Laboratory_work_3.Forms
             {
                 if (App.myGamer.Money >= 1000)
                 {
-                    homeLand.ArayleLand += 1;
+                    BL.Upgraiding(4);
                     gridComputerInfo.DataContext = null;
                     gridComputerInfo.DataContext = homeLand;
-                    App.myGamer.Money -= 1000;
                 }
 
                 else
@@ -146,10 +141,9 @@ namespace Laboratory_work_3.Forms
             {
                 if (App.myGamer.Money >= 1000)
                 {
-                    homeLand.Livestock += 1;
+                    BL.Upgraiding(5);
                     gridComputerInfo.DataContext = null;
                     gridComputerInfo.DataContext = homeLand;
-                    App.myGamer.Money -= 1000;
                 }
 
                 else
@@ -169,12 +163,10 @@ namespace Laboratory_work_3.Forms
             {
                 if (App.myGamer.Money >= 1000)
                 {
-                    homeLand.LivestockFeed += 1;
+                    BL.Upgraiding(6);
                     gridComputerInfo.DataContext = null;
                     gridComputerInfo.DataContext = homeLand;
-                    App.myGamer.Money -= 1000;
                 }
-
                 else
                 {
                     MessageBox.Show("Недостаточно денег");
@@ -192,10 +184,9 @@ namespace Laboratory_work_3.Forms
             {
                 if (App.myGamer.Money >= 1000)
                 {
-                    homeLand.LivestockMan += 1;
+                    BL.Upgraiding(7);
                     gridComputerInfo.DataContext = null;
                     gridComputerInfo.DataContext = homeLand;
-                    App.myGamer.Money -= 1000;
                 }
 
                 else
@@ -214,10 +205,9 @@ namespace Laboratory_work_3.Forms
             {
                 if (App.myGamer.Money >= 1000)
                 {
-                    homeLand.Drug += 1;
+                    BL.Corning(8);
                     gridComputerInfo.DataContext = null;
                     gridComputerInfo.DataContext = homeLand;
-                    App.myGamer.Money -= 1000;
                 }
 
                 else
@@ -229,143 +219,69 @@ namespace Laboratory_work_3.Forms
         private void btTellStories_Click(object sender, RoutedEventArgs e)
         {
 
-            App.myGamer.Fatigue += 25;
-            App.myWork.Experience += 10;
-            tbInfoFat.DataContext = null;
-            tbInfoFat.DataContext = Gamer;
-            tbInfoExp.DataContext = null;
-            tbInfoExp.DataContext = Work;
-            MessageBox.Show("Вы Рассказали историю");
-            if (App.myHome.Farmers == 2 && App.myHome.Tools == 2 && App.myHome.Livestock == 2 && App.myHome.LivestockFeed == 2 &&
-                App.myHome.LivestockMan == 2 && App.myHome.ArayleLand == 2 && App.myHome.Home == 2 && App.myHome.Drug == 2)
+            if (App.myGamer.Fatigue <= 90)
             {
-                App.myGamer.Fatigue -= 3;
+                var rand = new Random();
                 tbInfoFat.DataContext = null;
                 tbInfoFat.DataContext = Gamer;
                 tbInfoExp.DataContext = null;
                 tbInfoExp.DataContext = Work;
+                MessageBox.Show("Вы Рассказали историю");
+                BL.Corning(rand.Next(10));
             }
-            else if (App.myHome.Farmers == 3 && App.myHome.Tools == 3 && App.myHome.Livestock == 3 && App.myHome.LivestockFeed == 3 &&
-                App.myHome.LivestockMan == 3 && App.myHome.ArayleLand == 3 && App.myHome.Home == 3 && App.myHome.Drug == 3)
+            else
             {
-                App.myGamer.Fatigue -= 5;
-                tbInfoFat.DataContext = null;
-                tbInfoFat.DataContext = Gamer;
-                tbInfoExp.DataContext = null;
-                tbInfoExp.DataContext = Work;
-            }
-            else if (App.myHome.Farmers == 4 && App.myHome.Tools == 4 && App.myHome.Livestock == 4 && App.myHome.LivestockFeed == 4 &&
-                App.myHome.LivestockMan == 4 && App.myHome.ArayleLand == 4 && App.myHome.Home == 4 && App.myHome.Drug == 4)
-            {
-                App.myGamer.Fatigue -= 10;
-                tbInfoFat.DataContext = null;
-                tbInfoFat.DataContext = Gamer;
-                tbInfoExp.DataContext = null;
-                tbInfoExp.DataContext = Work;
-            }
-            else if (App.myHome.Farmers == 5 && App.myHome.Tools == 5 && App.myHome.Livestock == 5 && App.myHome.LivestockFeed == 5 &&
-                App.myHome.LivestockMan == 5 && App.myHome.ArayleLand == 5 && App.myHome.Home == 5 && App.myHome.Drug == 5)
-            {
-                App.myGamer.Fatigue -= 15;
-                tbInfoFat.DataContext = null;
-                tbInfoFat.DataContext = Gamer;
-                tbInfoExp.DataContext = null;
-                tbInfoExp.DataContext = Work;
+                MessageBox.Show("Вы слишком устали, подождите следующего дня");
             }
         }
 
         private void btWriteStories_Click(object sender, RoutedEventArgs e)
         {
-            App.myGamer.Fatigue += 50;
-            App.myWork.Experience += 25;
-            tbInfoFat.DataContext = null;
-            tbInfoFat.DataContext = Gamer;
-            tbInfoExp.DataContext = null;
-            tbInfoExp.DataContext = Work;
-            MessageBox.Show("Вы выполнили разработку");
-            if (App.myHome.Farmers == 2 && App.myHome.Tools == 2 && App.myHome.Livestock == 2 && App.myHome.LivestockFeed == 2 &&
-                App.myHome.LivestockMan == 2 && App.myHome.ArayleLand == 2 && App.myHome.Home == 2 && App.myHome.Drug == 2)
+            if (App.myGamer.Fatigue <= 90)
             {
-                App.myGamer.Fatigue -= 3;
+                var rand = new Random();
                 tbInfoFat.DataContext = null;
                 tbInfoFat.DataContext = Gamer;
                 tbInfoExp.DataContext = null;
                 tbInfoExp.DataContext = Work;
+                MessageBox.Show("Вы Что-то написали");
+                int randNum = rand.Next(10);
+                BL.Corning(randNum);
             }
-            else if (App.myHome.Farmers == 3 && App.myHome.Tools == 3 && App.myHome.Livestock == 3 && App.myHome.LivestockFeed == 3 &&
-                App.myHome.LivestockMan == 3 && App.myHome.ArayleLand == 3 && App.myHome.Home == 3 && App.myHome.Drug == 3)
+            else
             {
-                App.myGamer.Fatigue -= 5;
-                tbInfoFat.DataContext = null;
-                tbInfoFat.DataContext = Gamer;
-                tbInfoExp.DataContext = null;
-                tbInfoExp.DataContext = Work;
+                MessageBox.Show("Вы слишком устали, подождите следующего дня");
             }
-            else if (App.myHome.Farmers == 4 && App.myHome.Tools == 4 && App.myHome.Livestock == 4 && App.myHome.LivestockFeed == 4 &&
-                App.myHome.LivestockMan == 4 && App.myHome.ArayleLand == 4 && App.myHome.Home == 4 && App.myHome.Drug == 4)
-            {
-                App.myGamer.Fatigue -= 10;
-                tbInfoFat.DataContext = null;
-                tbInfoFat.DataContext = Gamer;
-                tbInfoExp.DataContext = null;
-                tbInfoExp.DataContext = Work;
-            }
-            else if (App.myHome.Farmers == 5 && App.myHome.Tools == 5 && App.myHome.Livestock == 5 && App.myHome.LivestockFeed == 5 &&
-                App.myHome.LivestockMan == 5 && App.myHome.ArayleLand == 5 && App.myHome.Home == 5 && App.myHome.Drug == 5)
-            {
-                App.myGamer.Fatigue -= 15;
-                tbInfoFat.DataContext = null;
-                tbInfoFat.DataContext = Gamer;
-                tbInfoExp.DataContext = null;
-                tbInfoExp.DataContext = Work;
-            }
+
         }
 
         private void btDOStories_Click(object sender, RoutedEventArgs e)
         {
-
-            App.myGamer.Fatigue += 75;
-            App.myWork.Experience += 50;
-            tbInfoFat.DataContext = null;
-            tbInfoFat.DataContext = Gamer;
-            tbInfoExp.DataContext = null;
-            tbInfoExp.DataContext = Work;
-            MessageBox.Show("Вы выполнили разработку");
-            if (App.myHome.Farmers == 2 && App.myHome.Tools == 2 && App.myHome.Livestock == 2 && App.myHome.LivestockFeed == 2 &&
-                App.myHome.LivestockMan == 2 && App.myHome.ArayleLand == 2 && App.myHome.Home == 2 && App.myHome.Drug == 2)
+            if (App.myGamer.Fatigue <= 90)
             {
-                App.myGamer.Fatigue -= 3;
+                var rand = new Random();
                 tbInfoFat.DataContext = null;
                 tbInfoFat.DataContext = Gamer;
                 tbInfoExp.DataContext = null;
                 tbInfoExp.DataContext = Work;
+                if (rand.Next(10) == 10)
+                {
+                    int x = rand.Next(10);
+                    MessageBox.Show("Вы выкопали клад");
+                    App.myGamer.Fatigue -= 3 * x;
+                    tbInfoFat.DataContext = null;
+                    tbInfoFat.DataContext = Gamer;
+                    tbInfoExp.DataContext = null;
+                    tbInfoExp.DataContext = Work;
+                }
+                else
+                {
+                    MessageBox.Show("Вы так ничего и не нашли(");
+                }
             }
-            else if (App.myHome.Farmers == 3 && App.myHome.Tools == 3 && App.myHome.Livestock == 3 && App.myHome.LivestockFeed == 3 &&
-                App.myHome.LivestockMan == 3 && App.myHome.ArayleLand == 3 && App.myHome.Home == 3 && App.myHome.Drug == 3)
+            else
             {
-                App.myGamer.Fatigue -= 5;
-                tbInfoFat.DataContext = null;
-                tbInfoFat.DataContext = Gamer;
-                tbInfoExp.DataContext = null;
-                tbInfoExp.DataContext = Work;
-            }
-            else if (App.myHome.Farmers == 4 && App.myHome.Tools == 4 && App.myHome.Livestock == 4 && App.myHome.LivestockFeed == 4 &&
-                App.myHome.LivestockMan == 4 && App.myHome.ArayleLand == 4 && App.myHome.Home == 4 && App.myHome.Drug == 4)
-            {
-                App.myGamer.Fatigue -= 10;
-                tbInfoFat.DataContext = null;
-                tbInfoFat.DataContext = Gamer;
-                tbInfoExp.DataContext = null;
-                tbInfoExp.DataContext = Work;
-            }
-            else if (App.myHome.Farmers == 5 && App.myHome.Tools == 5 && App.myHome.Livestock == 5 && App.myHome.LivestockFeed == 5 &&
-                App.myHome.LivestockMan == 5 && App.myHome.ArayleLand == 5 && App.myHome.Home == 5 && App.myHome.Drug == 5)
-            {
-                App.myGamer.Fatigue -= 15;
-                tbInfoFat.DataContext = null;
-                tbInfoFat.DataContext = Gamer;
-                tbInfoExp.DataContext = null;
-                tbInfoExp.DataContext = Work;
+                MessageBox.Show("Вы слишком устали, подождите следующего дня");
             }
         }
     }

@@ -39,25 +39,35 @@ namespace Laboratory_work_3.Forms
             App.myGamer = dgListGame.SelectedItem as Model.Gamer;
             App.myHome = dgListHomeLand.SelectedItem as Model.HomeLand;
             App.myWork = dgListWork.SelectedItem as Model.Work;
-
-            App.myGamer.GamerId = App.myHome.HomeId;
-            App.myWork.WorkId = App.myHome.HomeId;
-            if (App.myGamer.GamerId == App.myHome.HomeId)
+            try
             {
-                if (App.myGamer.GamerId == App.myWork.WorkId)
+                if (App.myGamer != null || App.myHome != null || App.myWork != null)
                 {
-                    GameWindow gameWindow = new GameWindow();
-                    gameWindow.Show();
-                    Close();
+                    if (App.myGamer.GamerId == App.myHome.HomeId)
+                    {
+                        if (App.myGamer.GamerId == App.myWork.WorkId)
+                        {
+                            GameWindow gameWindow = new GameWindow();
+                            gameWindow.Show();
+                            Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Выберете поля с одинаковым id");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Выберете поля с одинаковым id");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Выберете поля с одинаковым id");
+                    MessageBox.Show("Выберите поля во всех таблицах");
                 }
             }
-            else
-            {
-                MessageBox.Show("Выберете поля с одинаковым id");
+            catch
+            { 
             }
         }
 

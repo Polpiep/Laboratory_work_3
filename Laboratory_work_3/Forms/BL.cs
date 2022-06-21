@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Laboratory_work_3.Model;
+using System;
 
 namespace Laboratory_work_3.Forms
 {
     public class BL
     {
+
         public static string Eating(double m)
         {
             int needRich = Convert.ToInt32(10 * m);
@@ -49,17 +51,108 @@ namespace Laboratory_work_3.Forms
                     App.myWork.Experience += uping;
                     App.myGamer.Money -= needs;
                     return ("Вы успешно выполнили то, что планировали");
-                    
+
                 }
                 else
                 {
-                    return("Недостаточно денег");
+                    return ("Недостаточно денег");
                 }
             }
             else
             {
-                return("Недостаточно опыта");
+                return ("Недостаточно опыта");
             }
+        }
+        public static void Corning(int randNum)
+        {
+            App.myGamer.Fatigue += 2 * randNum;
+            App.myWork.Experience += 10 * randNum;
+        }
+        public static void Upgraiding(int NumUpdate)
+        {
+            if (NumUpdate == 1)
+            {
+                App.myHome.Home += 1;
+            }
+            else if (NumUpdate == 2)
+            {
+                App.myHome.Farmers += 1;
+            }
+            else if (NumUpdate == 3)
+            {
+                App.myHome.Tools += 1;
+            }
+            else if (NumUpdate == 4)
+            {
+                App.myHome.ArayleLand += 1;
+            }
+
+            else if (NumUpdate == 5)
+            {
+                App.myHome.Livestock += 1;
+            }
+            else if (NumUpdate == 6)
+            {
+                App.myHome.LivestockFeed += 1;
+            }
+            else if (NumUpdate == 7)
+            {
+                App.myHome.LivestockMan += 1;
+            }else if (NumUpdate == 8)
+            {
+                App.myHome.Drug += 1; 
+              
+            }
+            App.myGamer.Money -= 1000;
+        }
+        public static void Saving()
+        {
+
+            Model.Gamer newGamer = new Model.Gamer();
+            Model.HomeLand newComputer = new Model.HomeLand();
+            Model.Work newWork = new Model.Work();
+
+            newGamer.Name = App.myGamer.Name;
+            newGamer.Age = App.myGamer.Age;
+            newGamer.Gender = App.myGamer.Gender;
+            newGamer.Satiety = App.myGamer.Satiety;
+            newGamer.Fatigue = App.myGamer.Fatigue;
+            newGamer.Money = App.myGamer.Money;
+            newGamer.Day = App.myGamer.Day;
+
+            newComputer.Farmers = App.myHome.Farmers;
+            newComputer.Tools = App.myHome.Tools;
+            newComputer.Livestock = App.myHome.Livestock;
+            newComputer.LivestockFeed = App.myHome.LivestockFeed;
+            newComputer.LivestockMan = App.myHome.LivestockMan;
+            newComputer.ArayleLand = App.myHome.ArayleLand;
+            newComputer.Home = App.myHome.Home;
+            newComputer.Drug = App.myHome.Drug;
+
+            newWork.Name = App.myWork.Name;
+            newWork.Wages = App.myWork.Wages;
+            newWork.Minqualifications = App.myWork.Minqualifications;
+            newWork.Experience = App.myWork.Experience;
+            newWork.UpExperience = App.myWork.UpExperience;
+
+            using DB.MySqlLiteContext mySqlLiteContext = new DB.MySqlLiteContext();
+            mySqlLiteContext.Gamers.Add(newGamer);
+            mySqlLiteContext.SaveChanges();
+            mySqlLiteContext.Farms.Add(newComputer);
+            mySqlLiteContext.SaveChanges();
+            mySqlLiteContext.Works.Add(newWork);
+            mySqlLiteContext.SaveChanges();
+
+        }
+        public static void NextDay()
+        {
+            Work work = new Work();
+            Gamer gamer = new Gamer();
+            work.Experience += App.myWork.UpExperience;
+            gamer.Money += App.myWork.Wages;
+            gamer.Fatigue = 0;
+            gamer.Day += 1;
+            gamer.Satiety -= 10;
         }
     }
 }
