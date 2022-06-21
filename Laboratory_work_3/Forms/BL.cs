@@ -109,7 +109,7 @@ namespace Laboratory_work_3.Forms
         {
 
             Model.Gamer newGamer = new Model.Gamer();
-            Model.HomeLand newComputer = new Model.HomeLand();
+            Model.HomeLand newFarm = new Model.HomeLand();
             Model.Work newWork = new Model.Work();
 
             newGamer.Name = App.myGamer.Name;
@@ -120,14 +120,14 @@ namespace Laboratory_work_3.Forms
             newGamer.Money = App.myGamer.Money;
             newGamer.Day = App.myGamer.Day;
 
-            newComputer.Farmers = App.myHome.Farmers;
-            newComputer.Tools = App.myHome.Tools;
-            newComputer.Livestock = App.myHome.Livestock;
-            newComputer.LivestockFeed = App.myHome.LivestockFeed;
-            newComputer.LivestockMan = App.myHome.LivestockMan;
-            newComputer.ArayleLand = App.myHome.ArayleLand;
-            newComputer.Home = App.myHome.Home;
-            newComputer.Drug = App.myHome.Drug;
+            newFarm.Farmers = App.myHome.Farmers;
+            newFarm.Tools = App.myHome.Tools;
+            newFarm.Livestock = App.myHome.Livestock;
+            newFarm.LivestockFeed = App.myHome.LivestockFeed;
+            newFarm.LivestockMan = App.myHome.LivestockMan;
+            newFarm.ArayleLand = App.myHome.ArayleLand;
+            newFarm.Home = App.myHome.Home;
+            newFarm.Drug = App.myHome.Drug;
 
             newWork.Name = App.myWork.Name;
             newWork.Wages = App.myWork.Wages;
@@ -138,7 +138,7 @@ namespace Laboratory_work_3.Forms
             using DB.MySqlLiteContext mySqlLiteContext = new DB.MySqlLiteContext();
             mySqlLiteContext.Gamers.Add(newGamer);
             mySqlLiteContext.SaveChanges();
-            mySqlLiteContext.Farms.Add(newComputer);
+            mySqlLiteContext.Farms.Add(newFarm);
             mySqlLiteContext.SaveChanges();
             mySqlLiteContext.Works.Add(newWork);
             mySqlLiteContext.SaveChanges();
